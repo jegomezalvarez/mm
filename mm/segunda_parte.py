@@ -10,7 +10,7 @@ class Persona:
         print(f"Hola! Soy {self.nombre} y tengo {self.edad} años")
 
 class Trabajador(Persona):
-    def __init__(self, nombre, edad, departamento, puesto):
+    def __init__(self, nombre, edad, departamento = 'Data', puesto = 'Analyst'):
         super().__init__(nombre, edad)
         self.departamento = departamento
         self. puesto = puesto
@@ -31,3 +31,7 @@ trabajador_1.presentation()
 # 3
 # self.nombre hace referencia a la variable nombre dentro del objeto, su alcance es únicamente el objeto. 
 # En el caso de nombre, el alcance será de archivo, se trata de una variable global.
+
+# 4
+trabajador_test = Trabajador('Javier',33)
+trabajador_test.presentation()
