@@ -1,0 +1,32 @@
+source: https://towardsdatascience.com/run-airflow-docker-1b83a57616fb
+
+
+# Step 1: Fetch docker-compose.yaml
+mkdir airflow-local
+cd airflow-local
+curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.3.0/docker-compose.yaml'
+
+
+# Step 2: Create directories
+mkdir ./dags ./logs ./plugins
+
+
+# Step 3: Setting the Airflow user
+echo -e "AIRFLOW_UID=$(id -u)\nAIRFLOW_GID=0" > .env
+cat .env
+
+// AIRFLOW_UID=1000
+// AIRFLOW_GID=0
+
+
+# Step 4: Initialise the Airflow Database
+docker-compose up airflow-init
+
+
+# Step 5: Start Airflow services
+docker-compose up
+docker ps
+
+
+# Step 6: Access Airflow UI
+localhost:8080
