@@ -24,6 +24,10 @@ nombre = 'Alberto'
 persona_1 = Persona(nombre, 20)
 persona_1.presentation()
 
-#2
+# 2
 trabajador_1 = Trabajador('Juan',23,'I+D','ingeniero')
 trabajador_1.presentation()
+
+# 3
+# self.nombre hace referencia a la variable nombre dentro del objeto, su alcance es únicamente el objeto. 
+# En el caso de nombre, el alcance será de archivo, se trata de una variable global.
