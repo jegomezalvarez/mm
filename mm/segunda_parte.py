@@ -14,8 +14,16 @@ class Trabajador(Persona):
         super().__init__(nombre, edad)
         self.departamento = departamento
         self. puesto = puesto
+    def presentation(self):
+        super().presentation()
+        print(f"Trabajo como {self.puesto} en el departamento de {self.departamento}")
+
 
 
 nombre = 'Alberto'
 persona_1 = Persona(nombre, 20)
 persona_1.presentation()
+
+#2
+trabajador_1 = Trabajador('Juan',23,'I+D','ingeniero')
+trabajador_1.presentation()
