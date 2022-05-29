@@ -18,8 +18,6 @@ class Trabajador(Persona):
         super().presentation()
         print(f"Trabajo como {self.puesto} en el departamento de {self.departamento}")
 
-
-
 nombre = 'Alberto'
 persona_1 = Persona(nombre, 20)
 persona_1.presentation()
@@ -35,3 +33,8 @@ trabajador_1.presentation()
 # 4
 trabajador_test = Trabajador('Javier',33)
 trabajador_test.presentation()
+
+# 5
+my_var_list = ['Andrea', '42', 'Ventas', 'Manager']
+trabajador_2 = Trabajador(*my_var_list)
+trabajador_2.presentation()
