@@ -26,3 +26,7 @@ with DAG(
     operator_task = TimeDiff(diff_date=datetime(1987, 7, 1, 17, 0, 0), task_id='time_diff_task', dag=dag)
     
 start >> operator_task >> end
+
+# 5
+# Un Hook es una interfaz de alto nivel que permite establecer una conexión con una API o base de datos externa. Se integran con las Conexiones para poder obtener las credenciales.
+# Las conexiones son el conjunto de parámetros que permite establecer la conexión con un sistema externo. Se crean desde el frontal web y se almacena la información cifrada.
